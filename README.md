@@ -13,7 +13,7 @@
 
 You are asked to build a Railway Ticket Reservation System with the following conditions:  
 
-### 🎟️ Booking Rules
+###  1) 🎟️ Booking Rules
 - Total **63 confirmed berths** available.  
 - **9 RAC berths** (accommodates **18 RAC tickets**).  
 - **10 Waiting List tickets**.  
@@ -35,14 +35,14 @@ You are asked to build a Railway Ticket Reservation System with the following co
 
 ---
 
-### 🔄 Cancellation Rules
+### 2) 🔄 Cancellation Rules
 - If a **confirmed ticket is cancelled**, then:  
 - A passenger from **RAC moves to confirmed**.  
 - A passenger from **waiting list moves to RAC**.  
 
 ---
 
-### 🖨️ Print Tickets
+### 3) 🖨️ Print Tickets
 - **Booked Tickets**: Show passenger details and total count.  
 - **Available Tickets**: Show unoccupied berths and total count.  
 
