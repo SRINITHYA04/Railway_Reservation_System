@@ -68,4 +68,28 @@ You are asked to build a Railway Ticket Reservation System with the following co
 - **Paradigm**: Object-Oriented Programming  
 - **Concepts Used**: Encapsulation, Collections (List, Queue), Business Rules  
 
+---
+## Output
+
+ 1) After Running the Ticket Booking class
+    
+    <img width="314" height="190" alt="image" src="https://github.com/user-attachments/assets/493405e5-d3d3-4375-8725-2d8f67779533" />
+    
+2) Taking Bookings
+
+   <img width="795" height="440" alt="image" src="https://github.com/user-attachments/assets/4b300bc6-2da7-43fb-8a72-b04cd4ea1261" />
+
+  - For children under 5
+    
+      <img width="904" height="399" alt="image" src="https://github.com/user-attachments/assets/2c7ceac2-9bfb-4c08-8dfe-78101e831b1e" />
+
+  - For Female with child (Mom)
+    
+      <img width="990" height="439" alt="image" src="https://github.com/user-attachments/assets/45d448de-419e-457e-b7c8-adae659abab4" />
+
+  - For Senioer citizens over 60
+    
+      <img width="719" height="400" alt="image" src="https://github.com/user-attachments/assets/d825ff47-3790-4ca7-9ae2-dd0377a04810" />
+
+    
 
