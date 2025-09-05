@@ -17,7 +17,7 @@ public class TicketSystem {
     public void bookTickets(){
         Passenger passenger = new Passenger();
         if(!availableBerths.isEmpty()){
-            String allottedBerth = allocateBerth(passenger.getAge(), passenger.getBerthPreference(), passenger.getGender());
+            String allottedBerth = allocateBerth(passenger.getAge(), passenger.getBerthPreference(), passenger.getGender(), passenger.getIsParent());
             passenger.setAllottedBerth(allottedBerth);
             confirmedPassenger.add(passenger);
             availableBerths.remove(allottedBerth);
@@ -38,9 +38,9 @@ public class TicketSystem {
         }
     }
 
-    private String allocateBerth(int age, String preference, String gender) {
-        if( age > 60 || gender.equalsIgnoreCase("female") && availableBerths.contains("l")){
-            return "l";
+    private String allocateBerth(int age, String preference, String gender, boolean Mom) {
+        if( ((gender.equalsIgnoreCase("female") && Mom) || (age > 60) ) && availableBerths.contains("L") ){
+            return "L";
         }
          if(availableBerths.contains(preference)){
             return preference;
@@ -59,7 +59,7 @@ public class TicketSystem {
 
             if (!RACqueue.isEmpty()) {
                 Passenger RACpassenger = RACqueue.poll();
-                String allottedBerth = allocateBerth(RACpassenger.getAge(), RACpassenger.getBerthPreference(), RACpassenger.getGender());
+                String allottedBerth = allocateBerth(RACpassenger.getAge(), RACpassenger.getBerthPreference(), RACpassenger.getGender(), RACpassenger.getIsParent());
                 RACpassenger.setAllottedBerth(allottedBerth);
                 confirmedPassenger.add(RACpassenger);
                 availableBerths.remove(RACpassenger.getAllottedBerth());

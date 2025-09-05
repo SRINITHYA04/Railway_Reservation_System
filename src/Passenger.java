@@ -9,11 +9,12 @@ public class Passenger {
     private String gender;
     private String berthPreference;
     private String allottedBerth;
+    private boolean withChild;
 
 
     public Passenger(){
         Scanner sc = new Scanner(System.in);
-        this.ticketId +=passengerCount++;
+        this.ticketId += passengerCount++;
 
         System.out.println("Enter the Passenger Name: ");
         this.name = sc.next();
@@ -21,6 +22,11 @@ public class Passenger {
         this.age =sc.nextInt();
         System.out.println("Enter Passenger Gender (Female/Male) :");
         this.gender = sc.next().toLowerCase();
+        if(gender.equalsIgnoreCase("female")){
+            System.out.println("Are you with your child (yes / No): ");
+            String val =sc.next();
+            this.withChild = val.equalsIgnoreCase("yes");
+        }
         System.out.println("Enter the Berth Preference :");
         this.berthPreference = sc.next().toUpperCase();
 
@@ -35,6 +41,7 @@ public class Passenger {
     public String getBerthPreference(){ return berthPreference; }
     public String getTicketId(){ return ticketId; }
     public String getAllottedBerth(){ return allottedBerth; }
+    public boolean getIsParent(){ return withChild; }
 
 
     public void setAllottedBerth(String s){ allottedBerth= s; }
