@@ -1,11 +1,19 @@
 import java.util.*;
 
 public class TicketSystem {
-    private final List<String> availableBerths = new ArrayList<>(Arrays.asList("l","u,","m"));
+    private final List<String> availableBerths = new ArrayList<>();
     private final Queue<Passenger> RACqueue = new LinkedList<>();
     private final Queue<Passenger> WaitingListQueue = new LinkedList<>();
     private final List<Passenger> confirmedPassenger = new ArrayList<>();
 
+
+    public TicketSystem(){
+        for (int i = 1; i <= 63; i++) {
+            availableBerths.add("L");
+            availableBerths.add("M");
+            availableBerths.add("U");
+        }
+    }
     public void bookTickets(){
         Passenger passenger = new Passenger();
         if(!availableBerths.isEmpty()){
@@ -15,12 +23,12 @@ public class TicketSystem {
             availableBerths.remove(allottedBerth);
             System.out.println("Ticket Confirmed: "+passenger);
         }
-        else if(RACqueue.size() < 1){
+        else if(RACqueue.size() < 18){
             passenger.setAllottedBerth("RAC");
             RACqueue.offer(passenger);
             System.out.println("Ticked Booked in RAC: "+ passenger);
         }
-        else if(WaitingListQueue.size()<1){
+        else if(WaitingListQueue.size()<10){
             passenger.setAllottedBerth("WL");
             WaitingListQueue.offer(passenger);
             System.out.println("Ticked booked in Waiting List: "+passenger);
@@ -37,7 +45,7 @@ public class TicketSystem {
          if(availableBerths.contains(preference)){
             return preference;
         }
-         return availableBerths.get(0);
+         return availableBerths.getFirst();
     }
 
     public void cancelTickets(String ticketID){
