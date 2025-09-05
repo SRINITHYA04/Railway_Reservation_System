@@ -103,7 +103,7 @@ public class TicketSystem {
 
     public void printBookedRAC(){
         if(RACqueue.isEmpty()){
-            System.out.println("No tickets Booked yet!!");
+            System.out.println("No RAC tickets Booked yet!!");
         }
         else{
             System.out.println("RAC Tickets:");
@@ -115,7 +115,7 @@ public class TicketSystem {
 
     public void printBookedWaitingList(){
         if(WaitingListQueue.isEmpty()){
-            System.out.println("No tickets Booked yet!!");
+            System.out.println("No WaitingList tickets Booked yet!!");
         }
         else{
             System.out.println("Waiting List Tickets:");

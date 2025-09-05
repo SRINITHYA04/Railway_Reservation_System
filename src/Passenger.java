@@ -35,6 +35,7 @@ public class Passenger {
     public String toString(){
         return "TicketID:"+ticketId+"  Name:"+name+"  Age:"+age +"  Gender:"+gender+"  Allotted Berth:"+allottedBerth;
     }
+
     public int getAge(){ return age; }
     public String getName(){ return name; }
     public String getGender(){ return gender; }
