@@ -22,7 +22,7 @@ public class Passenger {
         this.age =sc.nextInt();
         System.out.println("Enter Passenger Gender (Female/Male) :");
         this.gender = sc.next().toLowerCase();
-        if(gender.equalsIgnoreCase("female")){
+        if(gender.equalsIgnoreCase("female") && age>=18){
             System.out.println("Are you with your child (yes / No): ");
             String val =sc.next();
             this.withChild = val.equalsIgnoreCase("yes");

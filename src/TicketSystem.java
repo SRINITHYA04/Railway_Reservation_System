@@ -42,6 +42,9 @@ public class TicketSystem {
         if( ((gender.equalsIgnoreCase("female") && Mom) || (age > 60) ) && availableBerths.contains("L") ){
             return "L";
         }
+        if(age <= 5){
+            return "Child-No Berth";
+        }
          if(availableBerths.contains(preference)){
             return preference;
         }
